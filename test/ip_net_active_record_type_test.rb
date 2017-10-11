@@ -117,9 +117,9 @@ class IpNetActiveRecordTypeTest < Minitest::Test
     ip = '127.0.0.0/26'
     ip_net = IpNetActiveRecordType::IpNet.new(ip)
     ip_addr = IPAddr.new(ip)
-    assert_equal ip, type.type_cast_for_database(ip_net)
-    assert_equal ip_net, type.cast(ip_addr)
-    assert_equal ip_net, type.cast(ip)
+    assert_equal ip, type.serialize(ip_net)
+    assert_equal ip_net, type.deserialize(ip_addr)
+    assert_equal ip_net, type.deserialize(ip)
     assert_equal ip_net, type.cast(ip_addr)
     assert_equal ip_net, type.cast(ip)
   end
