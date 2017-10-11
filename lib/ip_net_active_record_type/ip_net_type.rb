@@ -1,8 +1,8 @@
-require 'active_record/type/value'
+require 'active_model/type/value'
 require_relative 'ip_net'
 
 module IpNetActiveRecordType
-  class IpNetType < ActiveRecord::Type::Value
+  class IpNetType < ActiveModel::Type::Value
 
     def cast_value(value)
       case value
@@ -15,7 +15,7 @@ module IpNetActiveRecordType
       end
     end
 
-    def type_cast_for_database(value)
+    def serialize(value)
       value.to_s
     end
 

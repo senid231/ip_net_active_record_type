@@ -2,6 +2,8 @@
 
 Allows to use `inet` type correctly with `ActiveRecord`.
 
+use version `1.x.x` for `Rails 4` and version `2.x.x` for `Rails 5`
+
 ## Installation
 
 Add this line to your application's Gemfile:
