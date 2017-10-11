@@ -32,8 +32,8 @@ c.ip_sub_net = '127.0.0.0/25'
 c.attribute_changed?(:ip_sub_net) # true
 c.save!
 ip_net = Client.find(c.id).ip_sub_net
-ip_net.to_s # 127.0.0.0/26
-ip_net.to_s(:ip_with_hex_mask) # 127.0.0.0/255.255.255.192
+ip_net.to_s # 127.0.0.0/25
+ip_net.to_s(:ip_with_hex_mask) # 127.0.0.0/255.255.255.128
 ip_net.to_s(:ip_only) # 127.0.0.0
 ```
 
