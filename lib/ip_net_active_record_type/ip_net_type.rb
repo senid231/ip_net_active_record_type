@@ -9,14 +9,22 @@ module IpNetActiveRecordType
         when IpNetActiveRecordType::IpNet
           value
         when IPAddr
-          IpNetActiveRecordType::IpNet.from_ipaddr(value)
+          safe_typecast { IpNetActiveRecordType::IpNet.from_ipaddr(value) }
         else
-          IpNetActiveRecordType::IpNet.new(value)
+          safe_typecast { IpNetActiveRecordType::IpNet.new(value) }
       end
     end
 
     def serialize(value)
       value.to_s
+    end
+
+    private
+
+    def safe_typecast
+      yield
+    rescue ArgumentError
+      nil
     end
 
   end
