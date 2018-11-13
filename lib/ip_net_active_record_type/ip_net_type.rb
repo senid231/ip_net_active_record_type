@@ -1,4 +1,4 @@
-require 'active_model/type/value'
+require 'active_model/type'
 require_relative 'ip_net'
 
 module IpNetActiveRecordType
