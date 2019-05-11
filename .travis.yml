@@ -7,3 +7,7 @@ rvm:
   - 2.2
   - 2.3
 before_install: gem install bundler -v 1.16.0.pre.3
+branches:
+  only:
+    - master
+    - rails_5
