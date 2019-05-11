@@ -17,3 +17,9 @@ matrix:
     gemfile: gemfiles/rails5.gemfile
   - rvm: 2.3.1
     gemfile: gemfiles/rails52.gemfile
+  - rvm: jruby-9.2.1.0
+    gemfile: gemfiles/rails52.gemfile
+    jdk: openjdk11
+  - rvm: jruby-9.1.17.0
+    gemfile: gemfiles/rails52.gemfile
+    jdk: openjdk11
