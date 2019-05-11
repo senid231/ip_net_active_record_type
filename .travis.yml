@@ -1,5 +1,9 @@
 sudo: false
 language: ruby
+branches:
+  only:
+    - master
+    - rails_5
 
 before_install: gem install bundler -v 2.0.1
 
