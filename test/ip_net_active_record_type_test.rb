@@ -118,10 +118,10 @@ class IpNetActiveRecordTypeTest < Minitest::Test
     ip_net = IpNetActiveRecordType::IpNet.new(ip)
     ip_addr = IPAddr.new(ip)
     assert_equal ip, type.type_cast_for_database(ip_net)
-    assert_equal ip_net, type.type_cast_from_database(ip_addr)
-    assert_equal ip_net, type.type_cast_from_database(ip)
-    assert_equal ip_net, type.type_cast_from_user(ip_addr)
-    assert_equal ip_net, type.type_cast_from_user(ip)
+    assert_equal ip_net, type.cast(ip_addr)
+    assert_equal ip_net, type.cast(ip)
+    assert_equal ip_net, type.cast(ip_addr)
+    assert_equal ip_net, type.cast(ip)
   end
 
 end
