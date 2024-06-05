@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'active_support/core_ext/hash/keys'
 
 class IpNetActiveRecordTypeTest < Minitest::Test
 
