@@ -16,7 +16,7 @@ module IpNetActiveRecordType
     end
 
     def serialize(value)
-      value.to_s
+      value&.to_s
     end
 
     private

@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'active_support/core_ext/hash/keys'
 
 class IpNetActiveRecordTypeTest < Minitest::Test
 
@@ -122,6 +121,11 @@ class IpNetActiveRecordTypeTest < Minitest::Test
     assert_equal ip_net, type.deserialize(ip)
     assert_equal ip_net, type.cast(ip_addr)
     assert_equal ip_net, type.cast(ip)
+  end
+
+  def test_type_nil_value
+    type = IpNetActiveRecordType::IpNetType.new
+    assert_nil type.serialize(nil)
   end
 
   def test_type_incorrect_value
