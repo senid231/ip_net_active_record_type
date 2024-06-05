@@ -123,6 +123,11 @@ class IpNetActiveRecordTypeTest < Minitest::Test
     assert_equal ip_net, type.cast(ip)
   end
 
+  def test_type_nil_value
+    type = IpNetActiveRecordType::IpNetType.new
+    assert_nil type.serialize(nil)
+  end
+
   def test_type_incorrect_value
     type = IpNetActiveRecordType::IpNetType.new
     ip = 'test'
