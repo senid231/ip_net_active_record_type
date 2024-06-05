@@ -2,7 +2,7 @@
 
 Allows to use `inet` type correctly with `ActiveRecord`.
 
-use version `1.x.x` for `Rails 4` and version `2.x.x` for `Rails 5`
+use version `1.x.x` for `Rails 4` and version `2.x.x` for `Rails 5+`
 
 ## Installation
 
